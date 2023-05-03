@@ -7,4 +7,3 @@ alert(`Hello, ${userLastName} ${userFirstName} ${userFatherName}! Welcome to our
 //----------------------------PART2-----------------------------------------------------------//
 anyNumber = prompt('Please put any five-digit number');
 alert(anyNumber.replaceAll('',' '));
-

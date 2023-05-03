@@ -9,4 +9,3 @@ alert(`${number1} + ${number2 } = ${plusResult}`);
 alert(`${number1} - ${number2 } = ${minusResult}`);
 alert(`${number1} * ${number2 } = ${multiplyResult}`);
 alert(`${number1} / ${number2 } = ${divisionResult}`);
-

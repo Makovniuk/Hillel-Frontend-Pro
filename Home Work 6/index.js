@@ -36,4 +36,3 @@ if (!favoriteSport) {
 }
 
 alert(`${answerbBirthYear} ${answearCityOfLive} ${answerFavoritSport}`);
-

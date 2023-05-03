@@ -15,4 +15,3 @@ switch (numOrStr) {
     default:
         console.log('OK!');
 }
-
