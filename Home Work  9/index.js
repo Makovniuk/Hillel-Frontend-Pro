@@ -13,7 +13,7 @@ dollarExchange = 27;
 numberOfDollars = 10;
 
 while (numberOfDollars <= 100) {
-    console.log(`Cost ${numberOfDollars} USD is: ${dollarExchange * numberOfDollars } UAH`);
+    console.log(`Cost ${numberOfDollars} USD is: ${dollarExchange * numberOfDollars} UAH`);
     numberOfDollars += 10;
 }
 
@@ -33,7 +33,7 @@ while (count <= 100 && squareCount <= wholeNumberN) {
 wholeNumber = +prompt('Please, enter any whole number!');
 divisor = 2;
 
-while (wholeNumber > 1 && divisor < wholeNumber && wholeNumber%divisor != 0 ) {
+while (wholeNumber > 1 && divisor < wholeNumber && wholeNumber % divisor != 0 ) {
     divisor++;
 }
 
@@ -49,7 +49,7 @@ console.log(answer);
 number = +prompt('Please, enter any whole number!');
 numberPower = null;
 
-while (number%3 === 0) {
+while (number % 3 === 0) {
     number /= 3;
     numberPower++;
 }
