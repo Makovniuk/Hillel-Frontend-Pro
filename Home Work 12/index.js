@@ -46,7 +46,7 @@ switch (categoryBuy) {
         break;
 } 
 
-  //----------------------------Switch and case for productOfVegetables----------------------//
+//----------------------------Switch and case for productOfVegetables------------------------//
 if (categoryBuy === 'vegetables') {
 switch (productOfVegetables) {
     case 'cabbage':
@@ -94,7 +94,7 @@ switch (productOfVegetables) {
 }  
 }  
 
- //-------------------------------Switch and case for productOfFruits-------------------------//
+//-------------------------------Switch and case for productOfFruits-------------------------//
 else {
 switch (productOfFruits) {
     case 'coconut':
