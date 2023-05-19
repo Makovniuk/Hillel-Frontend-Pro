@@ -117,12 +117,12 @@ for (i = 0; i < newArray.length; i++) {
         maxElement = newArray[i];
     }       
 }
+
 newArray2 = [];
 for (i = 0; i < newArray.length; i++) {
     newArray[i] !== maxElement 
     ? newArray2.push(newArray[i] = 0)
-    : newArray2.push(newArray[i]);
-          
+    : newArray2.push(newArray[i]);         
 }
 
 console.log('Your new zeroed array:', newArray2);
