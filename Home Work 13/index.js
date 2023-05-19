@@ -1,11 +1,12 @@
 newArray = [16,-37,54,-4,72,-56,47,4,-16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
 console.log(newArray);
+
 //1)--------Знайти суму та кількість позитивних елементів.-------//
 resultSumPositiNumber = 0;
 countPositivNumber = 0;
 
 for (i = 0; i < newArray.length; i++) {
-    if (newArray[i] > 0){
+    if (newArray[i] > 0) {
         resultSumPositiNumber += newArray[i];
         countPositivNumber++;
     }
@@ -86,7 +87,6 @@ for (i = 0; i < newArray.length; i++) {
 
 console.log(`Sum of positive pair  elements of array is: ${sumPairPositiveElements}`);
 
-
 //8)---------Знайти суму непарних позитивних елементів.-------//
 sumUnpairPositiveElements = 0;
 
@@ -121,8 +121,8 @@ newArray2 = [];
 for (i = 0; i < newArray.length; i++) {
     newArray[i] !== maxElement 
     ? newArray2.push(newArray[i] = 0)
-    : newArray2.push(newArray[i])
+    : newArray2.push(newArray[i]);
           
 }
-console.log(newArray2);
-console.log(`Your new zeroed array: ${newArray2}`);
+
+console.log('Your new zeroed array:', newArray2);
