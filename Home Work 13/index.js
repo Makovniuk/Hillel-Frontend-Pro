@@ -19,9 +19,9 @@ console.log(`Count of positive number of array is: ${countPositivNumber}`);
 minElement = 0;
 
 for (i = 0; i < newArray.length; i++) {
-       if (newArray[i] < minElement) {
+    if (newArray[i] < minElement) {
         minElement = newArray[i];
-       }       
+    }       
 }
 
 serialNumberMinElement = newArray.indexOf(minElement);
@@ -33,9 +33,9 @@ console.log(`Serial number minimal element of array is: ${serialNumberMinElement
 maxElement = 0;
 
 for (i = 0; i < newArray.length; i++) {
-       if (newArray[i] > maxElement) {
+    if (newArray[i] > maxElement) {
         maxElement = newArray[i];
-       }       
+    }       
 }
 
 serialNumberMaxElement = newArray.indexOf(maxElement);
@@ -113,9 +113,9 @@ console.log(`Sum of positive unpair  elements of array is: ${multiplyPositiveEle
 maxElement = 0;
 
 for (i = 0; i < newArray.length; i++) {
-       if (newArray[i] > maxElement) {
+    if (newArray[i] > maxElement) {
         maxElement = newArray[i];
-       }       
+    }       
 }
 newArray2 = [];
 for (i = 0; i < newArray.length; i++) {
