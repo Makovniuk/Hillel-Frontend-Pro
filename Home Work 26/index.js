@@ -46,8 +46,8 @@ Array.prototype.heroRender = function(folrerName) {
 `);
 }
 
-const rendedTableMarvelHeroes = marvelHeroes.heroRender('marvel');
-const rendedTableDcHeroes = dcHeroes.heroRender('dc');
+const renderedTableMarvelHeroes = marvelHeroes.heroRender('marvel');
+const renderedTableDcHeroes = dcHeroes.heroRender('dc');
 
-console.log(rendedTableMarvelHeroes);
-console.log(rendedTableDcHeroes);
+console.log(renderedTableMarvelHeroes);
+console.log(renderedTableDcHeroes);
