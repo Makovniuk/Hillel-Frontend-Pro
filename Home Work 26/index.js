@@ -19,48 +19,35 @@ let dcHeroes = [
 	}
 ];
 
-Array.prototype.heroRender =  function(folrerName) {
-   return this.map(function(item) {
-	debugger
-	item['age'] = '25';
-	return item
-   })
+Array.prototype.heroRender = function(folrerName) {
+   const tBody = [];
+   this.map(function(item) {
+ 		tBody.push(`
+		<tbody>
+ 			<tr>
+ 				<td>${item.name}</td>
+ 				<td><img class="img" src="images/${folrerName}/
+				${item.name.replaceAll(' ', '').toLowerCase()}.svg" alt="${item.name}"></td>
+ 			</tr>
+		</tbody>
+	`);
+   });
 
+   document.write(`
+   <table class="table">
+	    <thead>
+		   <tr>
+			   <th>Name</th>
+			   <th>Icon</th>
+		   </tr>
+	    </thead>
+	    ${tBody.join('')}
+	</table>  
+`);
 }
 
-console.log(dcHeroes.heroRender())
+const rendedTableMarvelHeroes = marvelHeroes.heroRender('marvel');
+const rendedTableDcHeroes = dcHeroes.heroRender('dc');
 
-
-
-
-
-
-// `
-// <tr>
-// 	<td>Thor</td>
-// 	<td>
-// 		<img src="images/marvel/thor.svg">
-// 	</td>
-// </tr>
-
-// <table>
-// 		<thead>
-// 			<tr>
-// 				<th>Name</th>
-// 				<th>Icon</th>
-// 			</tr>
-// 		</thead>
-// 		<tbody>
-// 			<tr>
-// 				<td>Thor</td>
-// 				<td>
-// 					<img src="images/marvel/thor.svg">
-// 				</td>
-// 			</tr><tr>
-// 				<td>Spider Man</td>
-// 				<td>
-// 					<img src="images/marvel/spiderman.svg">
-// 				</td>
-// 			</tr>
-// 		</tbody>
-// 	</table>`
+console.log(rendedTableMarvelHeroes);
+console.log(rendedTableDcHeroes);
