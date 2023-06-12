@@ -19,7 +19,7 @@ function Car(brand, model, yearOfIssue, color) {
       this.owner = person;
       console.log(`New owner car: ${person.firstName}!`);
     } else {
-      console.log(`${person.firstName} is not an adult. Cannot be the owner of the car!`)
+      console.log(`${person.firstName} is not an adult. Cannot be the owner of the car!`);
     };
   };
 
