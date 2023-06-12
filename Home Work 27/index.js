@@ -15,7 +15,7 @@ function Car(brand, model, yearOfIssue, color) {
   this.owner = null;
 
   this.assingOwner = function(person) {
-    if (person.age > 18) {
+    if (person.age >= 18) {
       this.owner = person;
       console.log(`New owner car: ${person.firstName}!`);
     } else {
@@ -31,7 +31,7 @@ function Car(brand, model, yearOfIssue, color) {
 }
 
 const personAnna = new Person('Anna', 25);
-const personDmitrii = new Person('Dmitrii', 15);
+const personDmitrii = new Person('Dmitrii', 18);
 const personAlex = new Person('Alex', 40);
 
 const carToyota = new Car('Toyota', 'Camry', 2020, 'Black');
