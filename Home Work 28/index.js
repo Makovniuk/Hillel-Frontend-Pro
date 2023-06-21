@@ -92,18 +92,17 @@ for (let key in categoryProducts) {
     });
 };
 
-
 document.write(`
   <table class="table">
-	   <thead>
-		  <tr>
-		      <th>Image</th>
-			  <th>Name</th>
-			  <th>Price</th>
-		  </tr>
-	   </thead>
-	   <tbody>
-	        ${totalArrayProducts.join('')}
-	   </tbody>
+	 <thead>
+		<tr>
+	    <th>Image</th>
+		   <th>Name</th>
+		   <th>Price</th>
+		</tr>
+	 </thead>
+	 <tbody>
+	    ${totalArrayProducts.join('')}
+	 </tbody>
    </table>  
 `);
