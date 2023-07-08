@@ -1,16 +1,3 @@
-const roles = {
-	admin: "https://www.svgrepo.com/show/421614/admin-user-web.svg",
-	student:"https://www.svgrepo.com/show/520508/student.svg",
-	lector: "https://www.svgrepo.com/show/61229/professor.svg"
-};
-
-const gradation = {
-	20: "satisfactory",
-	55: "good",
-	85: "very-good",
-	100: "excellent"
-};
-
 const users = [
   {
     name: "Jack Smith",
@@ -42,7 +29,7 @@ const users = [
     courses: [
       {
         title: "Front-end Pro",
-        mark: 55,
+        mark: 50,
       },
     ],
   },
@@ -54,11 +41,11 @@ const users = [
     courses: [
       {
         title: "Front-end Pro",
-        mark: 85,
+        mark: 75,
       },
       {
         title: "Java Enterprise",
-        mark: 20,
+        mark: 23,
       },
     ],
   },
@@ -70,17 +57,17 @@ const users = [
     courses: [
       {
         title: "Front-end Pro",
-        score: 20,
+        score: 10,
         lector: "Leo Smith",
       },
       {
         title: "Java Enterprise",
-        score: 55,
+        score: 50,
         lector: "David Smith",
       },
       {
         title: "QA",
-        score: 85,
+        score: 75,
         lector: "Emilie Smith",
       },
     ],
@@ -93,8 +80,8 @@ const users = [
     courses: [
       {
         title: "Front-end Pro",
-        score: 85,
-        studentsScore: 85,
+        score: 78,
+        studentsScore: 79,
       },
       {
         title: "Java Enterprise",
@@ -105,146 +92,132 @@ const users = [
   },
 ];
 
+const usersBlock = document.querySelector('.users');
+
+const rolesImg = {
+	admin: "https://www.svgrepo.com/show/421614/admin-user-web.svg",
+	student:"https://www.svgrepo.com/show/520508/student.svg",
+	lector: "https://www.svgrepo.com/show/61229/professor.svg"
+};
+
+const ROLES = {
+  "student": user => new Student(user),
+  "admin": user => new Admin(user),
+  "lector": user => new Lector(user)
+}
+
+const gradation = {
+	20: "satisfactory",
+	55: "good",
+	85: "very-good",
+	100: "excellent"
+};
+
+function gradeMark(gradationObject, mark) {
+  let grade = `test Grade`
+  for (let key in gradationObject) {
+    if (mark <= key) {
+      grade = gradationObject[key]
+      break
+    }
+  }
+  return grade
+};
+
+
 class User {
-  constructor(name, age, role, img, courses) {
-    this.name = name;
-    this.age = age;
-    this.role = role;
-    this.img = img;
-    this.courses = courses;
+  constructor(arg) {
+    this.name = arg.name;
+    this.age = arg.age;
+    this.role = arg.role;
+    this.img = arg.img;
+    if(arg.courses) 
+      this.courses = arg.courses
   }
 
-  render() {
-    document.write(`
-    <div class="users">
-      <div class="user">
-	  	  <div class="user__info">
-              <div class="user__info--data">
-                  <img src="${this.img}" alt="${this.name}" height="50">
-                    <div class="user__naming">
-                      <p>Name: <b>${this.name}</b></p>
-                      <p>Age: <b>${this.age}</b></p>
-                   </div>
-              </div>
+  renderFullInfo() {
+   return `
+     <div class="user">
+    	  <div class="user__info">
+          <div class="user__info--data">
+            <img src="${this.img}" alt="${this.name}" height="50">
+            <div class="user__naming">
+              <p>Name: <b>${this.name}</b></p>
+              <p>Age: <b>${this.age}</b></p>
           </div>
-          <div class="user__info--role ${this.role}">
-              <img src="${roles[this.role]}" alt="${this.role}" height="25">
-              <p>${this.role}</p>
         </div>
-	    </div>
-    </div>
-    `);
-  }
-
-
-
-  renderCourses() {
-    this.courses?.forEach(function (course) {
-      document.write(`
-      <div class="users">
-        <div class="user">
-	        <div class="user__courses">
-              <p class="user__courses--course ${this?.role}">
-                ${course.title} <span class="${gradation[course.mark]}">${gradation[course.mark]}</span>
-              </p>
-            </div>
+        <div class="user__info--role ${this.role}">
+          <img src="${rolesImg[this.role]}" alt="${this.role}" height="25">
+          <p>${this.role}</p>
         </div>
       </div>
-	    `);
-    });
+      ${this.courses ? this.renderCourses() : ``}
+    </div>`;
   }
+  
+  renderCourses() {
+    let allCourse = this.courses
+     .map(item => {
+       return `<div class="user__courses--course ${this.role}">
+        ${item.title} <span class="${gradeMark(gradation, item.mark)}">${gradeMark(gradation, item.mark)}</span>
+       </div>`}).join('')
+  
+    return `<div class="user__courses">${allCourse}</div>`;
+  } 
 }
- 
- 
+   
+   
 class Student extends User {
-  constructor(name, age, role, img, courses) {
-    super(name, age, role, img, courses);
-  }
-
-  renderCourses() {
-    super.renderCourses();
-  }
-}
-
-class Lector extends User {
-  constructor(name, age, role, img, courses) {
-    super(name, age, role, img, courses);
-  }
-
-  renderCourses() {
-    this.courses?.forEach(function (course) {
-      document.write(`
-      <div class="users">
-        <div class="user">
-          <div class="user__courses admin--info">
-            <div class="user__courses--course lector">
-               <p>Title: <b>${course.title}</b></p>
-                <p>Lector's score: <span class="${gradation[course.score]}">${gradation[course.score]}</span></p>
-                <p>Average student's score:
-                <span class="${gradation[course.studentsScore]}">${gradation[course.studentsScore]}</span></p>
-            /div>
-          </div>
-        </div>
-      </div>
-		`);
-    });
+  constructor(arg) {
+    super(arg)
   }
 }
 
 class Admin extends User {
-  constructor(name, age, role, img, courses) {
-    super(name, age, role, img, courses);
+  constructor(arg) {
+    super(arg)
   }
 
   renderCourses() {
-    this.courses?.forEach(function (course) {
-      document.write(`
-        <div class="users">
-          <div class="user">
-            <div class="user__courses admin--info">
-                <div class="user__courses--course admin">
-                    <p>Title: <b>${course.title}</b></p>
-                    <p>Admin's score: <span class="${gradation[course.score]}">${gradation[course.score]}</span></p>
-                   <p>Lector: <b>${course.lector}</b></p>
-                </div>
-            </div>
-          </div> 
-        </div>
-		`);
-    });
+    let allCourse = this.courses
+     .map(item => {
+       return `<div class="user__courses--course ${this.role}">
+         <p>Title: <b>${item.title}</b></p>
+         <p>Admin's score: <span class="${gradeMark(gradation, item.score)}">${gradeMark(gradation, item.score)}</span></p>
+         <p>Lector: <b>${item.lector}</b></p>
+       </div>`}).join('')
+     
+    return `<div class="user__courses admin--info">${allCourse}</div>`;
   }
 }
 
-users.forEach(function (user) {
-  if (user.role === "student") {
-    const student = new Student(
-      user.name,
-      user.age,
-      user.role,
-      user.img,
-      user.courses
-    );
-    student.render();
-    student.renderCourses();
-  } else if (user.role === "lector") {
-    const lector = new Lector(
-      user.name,
-      user.age,
-      user.role,
-      user.img,
-      user.courses
-    );
-    lector.render();
-    lector.renderCourses();
-  } else {
-    const admin = new Admin(
-      user.name,
-      user.age,
-      user.role,
-      user.img,
-      user.courses
-    );
-    admin.render();
-    admin.renderCourses();
+class Lector extends User {
+  constructor(arg) {
+    super(arg);
   }
-});
+
+  renderCourses() {
+    let allCourse = this.courses
+     .map(item => {
+       return `<div class="user__courses--course ${this.role}">
+         <p>Title: <b>${item.title}</b></p>
+         <p>Lector's score: <span class="${gradeMark(gradation, item.score)}">${gradeMark(gradation, item.score)}</span></p>
+         <p>Average student's score: <span class="${gradeMark(gradation, item.score)}">${gradeMark(gradation, item.score)}</span></p>
+       </div>`}).join('')
+     
+    return `<div class="user__courses admin--info">${allCourse}</div>`;
+  }
+}
+
+function renderUsers(array) {
+  let users = array
+    .map(user => ROLES[user.role] ? ROLES[user.role](user) : new User(user))
+    .map(user => {
+      console.log(user);
+      return user;
+    })
+    .map(user => user.renderFullInfo()).join(``);
+
+    usersBlock.innerHTML = users;
+}
+renderUsers(users);
