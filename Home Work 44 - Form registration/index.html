@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <title>Home Work 44/Form registration</title>
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;} 
+
+        .table-info, #container-form {
+            display: flex;
+            justify-content: center;}
+
+        table {
+        	width: 500px;
+        	margin-bottom: 20px;
+        	border: 1px solid #dddddd;
+        	border-collapse: collapse;
+            text-align: center;}
+
+        table th {
+        	font-weight: bold;
+        	padding: 5px;
+        	background: #efefef;
+        	border: 1px solid #dddddd;}
+
+        table td {
+        	border: 1px solid #dddddd;
+        	padding: 5px;}  
+    </style>
+</head>
+<body> 
+<div id="container-form">
+    <form id="form"> 
+        <h1>Registration form</h1>
+        <p>
+        <label for="text"><b>Full Name:</b></label>
+        <input type="text" id="fullName" placeholder="Enter your full name..." name="Full Name">
+        </p>
+
+        <p>
+        <label for="text"><b>Birth Date:</b></label>
+        <input type="text" id="birthDate" placeholder="Enter your birth date.." name="Birth Date">
+        </p>
+        
+        <p><b>Please select your gender:</b></p>
+        <input type="radio" class="gender" name="gender" value="Male">
+        <label for="gender">Male</label>
+
+        <p>
+        <input type="radio" class="gender" name="gender" value="Female" >
+        <label for="gender">Female</label>
+        </p>
+
+        <p>
+        <label for=""><b>City:</b></label>
+        <select id="city" name="City">
+          <option value="Kiev">Kiev</option>
+          <option value="Odessa">Odessa</option>
+          <option value="London">London</option>
+        </select>
+        </p>
+
+        <p>
+        <label for="address"><b>Address:</b></label>
+        <textarea id="address" name="Address" placeholder="Write address.." style="height:50px"></textarea>
+        </p>
+
+        <p>
+        <b>Languages:</b>
+        <label class="container">Ukrainian</label>
+        <input type="checkbox" class="languages" name="language1" value="Ukrainian">
+
+        <label class="container">English </label>
+        <input type="checkbox" class="languages" name="language2" value="English">
+
+        <label class="container">French</label>
+        <input type="checkbox" class="languages" name="language3" value="French">
+
+        <label class="container">German</label>
+        <input type="checkbox" class="languages" name="language4" value="German">
+        </p>
+        
+        <button type="button" id="saveForm"><b>Save</b></button>
+    </form>
+</div>
+<div class="table-info">
+</div>
+    <script src="index.js"></script> 
+</body>
+</html>
