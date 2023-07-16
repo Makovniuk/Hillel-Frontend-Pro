@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Work 44/ Internet Market</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="slyle.css">
+</head>
+<body>
+  <div class="wrapper"></div>
+    <div class="order-block-form" >
+      <div class="title"><span><h2>Order Form</h2></span></div><p></p>
+        <form class="order-form" name="my_form" id="forma">
+
+          <label><span class="fio"> Full Name :</span> <br/>
+          <input name="Full Name" id="fullName" type="text" class="guest" required></label><p></p>
+
+          <span class="city"> City:</span><br/>
+          <select name="City"class="guest" id="city" required> 
+            <option></option>
+            <option value="Kiev">Kiev</option> 
+            <option value="Odessa">Odessa</option>
+            <option value="Dnipro">Dnipro</option>
+            <option value="Lviv">Lviv</option>
+            <option value="Sumy">Sumy</option>cdcccc
+            <option value="Kherson">Kherson</option>
+            <option value="Chrerkasy">Chrerkasy</option>
+            <option value="Kropivnytski">Kropivnytski</option>
+          </select><p>
+
+          <label><span class="branch-number"> Branch number "Nova Pochta":</span><br/>
+          <input type="number" name="Branch number Nova Pochta" id="branch" class="guest" min="1" required ></label><p>
+          
+          <span class="pay-method"> Payment method:</span><br/>
+          <select name="Pay-method"class="guest"  id="pay" required>
+            <option></option>
+            <option value="card payment">Card payment</option> 
+            <option value="after payment">After payment</option>
+          </select><p>
+
+          <label><span class="production-quantity"> Production quantity:</span><br/>
+          <input type="number" name="Production quantity" id="quantity" class="guest" min="1" required></label><p>
+
+          <label><span class="text">Comment:</span><br/>
+          <textarea id="comment" name="Comment" placeholder="Write comment.." style="width:500px" ></textarea></p>
+          
+          <div class="bottom">
+            <button type="submit"  id="sabmit" class="bottom1" value="Confirm">SAVE</button>
+            <button type="button"  id="cancel" class="bottom2" value="Cancel order">CANCEL</button>
+          </div>
+        </form>
+      </div>
+  </div>
+    <div class="table-info"></div>
+      <div class="order-product-info"></div>
+  <script src="index.js"></script> 
+</body>
+</html>
