@@ -1,0 +1,193 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    max-width: 1170px;
+    height: auto;
+    margin: 20px auto;}
+
+section {
+    padding-top: 20px;
+    width: 390px;
+    height: auto;
+    padding: 10px;}
+
+img {
+    height: 150px; 
+    padding-top: 20px; }
+
+.button-bay {
+    background-color: #4CAF50; 
+    border: none;
+    color: rgb(12, 12, 12);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; 
+    border-radius:10px; 
+    cursor: pointer;
+    color: white;}
+
+.button-bay:hover, .bottom1:hover,.bottom2:hover, .order-list-remove:hover {
+    background-color: #ccc;}
+
+.category ,h3 {
+    cursor: pointer;
+    padding-bottom: 10px;}
+
+.category:hover {
+    color : rgb(206, 204, 204)}  
+
+.category-product-section {
+    margin-top: 20px;}
+
+.info-product-section {
+    display: flex;
+    justify-content: center;}
+
+html {
+    scroll-behavior: smooth;}
+
+.order-block-form {
+     display: none;
+     flex-direction: column;
+     justify-content: center;   
+     width: 500px;
+     border: 1px solid white;
+     margin: 10px auto;
+     padding-bottom: 50px;
+     font-family: 'Quicksand', sans-serif;}
+
+.title {
+    width: 470px;
+    height: 50px;
+    background: DimGrey;
+    text-align:center;
+    color: white;
+    padding: 8px 20px 20px;
+    border-radius: 10px;}
+
+.table-info, #container-form {
+    display: flex;
+    justify-content: center;}
+  
+table {
+    width: 390px;
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 15px;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 20px;}
+  
+table th {
+    font-weight:bolder;
+     padding: 5px;
+     background: #efefef;
+     border: 1px solid #dddddd;}
+  
+table td {
+    border: 1px solid #dddddd;
+    padding: 5px;}  
+
+.fio::after,.pay-metod::after,.city::after,.branch-number::after, .production-quantity::after {
+    content:"*";
+    color:red;}
+
+.bottom1, .bottom2 {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; 
+    border-radius:10px;
+    stify-content: space-between;
+    margin-left: 90px;
+    cursor: pointer;}
+
+.guest {
+    width: 500px;
+    height: 30px;
+    border: 1px solid LightGrey;}
+
+.order-product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    margin: 0 auto;
+    width: 390px;}
+
+.product-price{
+    color: green;
+}
+
+/* -------------------------------ORDER LIST-------------------------------- */
+
+.orders-list-wrapper {
+    display: none;
+    flex-direction: column;
+    max-width: 900px;
+    height: auto;
+    margin: 20px auto;
+    /* border: 1px solid black; */
+    align-items: baseline;
+}
+
+.order-list-card{
+    border: solid 1px gray;
+    border-radius: 20px;
+    height: auto;
+    width: 100%;
+    margin-bottom: 25px;
+    /* margin-left: 25px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color:ghostwhite ;
+}
+
+.order-list-remove{
+    border-radius: 50px;
+    color: red;
+    font-weight: bolder;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.order-list-title{
+    width: 500px;
+    margin-left:px;
+    cursor: pointer;
+
+}
+.order-list-price{
+    margin-left: 20px;
+    color: green;
+
+}
+
+.order-list-date{
+    margin-left: 50px;
+    text-align: left;
+    color: rgb(88, 88, 88);
+
+}
+
+.order-list-titleBlock, h1{
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    margin-bottom: 30px;
+}
