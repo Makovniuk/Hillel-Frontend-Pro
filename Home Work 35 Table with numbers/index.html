@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Work 35/ Table with numbers</title>
+    <style>
+        body {
+			margin: 50px;
+			height: 50vh;
+			width: 50vw;
+		}
+
+		.grid-wrapper {
+			height: 100%;
+			display: grid;
+            border: 1px solid rgb(133, 133, 133);
+			grid-template-columns: repeat(10, 1fr);
+			grid-template-rows: repeat(10, 1fr);
+            max-width: 800px;
+            height: auto;
+            margin: 20px auto;
+		}
+
+		.grid {
+			border: 1px solid rgb(133, 133, 133);
+			display: flex;
+			align-items: center;
+		}
+
+		.number-div {
+            text-align: center;
+			width: 40px;
+			height: 40px;
+            margin-top:10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid-wrapper"></div>
+    <script src="index.js"></script> 
+</body>
+</html>
