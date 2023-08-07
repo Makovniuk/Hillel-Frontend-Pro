@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Work 42/ Slaider Basic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+<style>
+  .slider-container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  .slider {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slider img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+  }
+  
+  .prev-button,
+  .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
+    color: rgb(20, 20, 20);
+    cursor: pointer;
+  }
+  
+  .prev-button {
+    left: 10px;
+  }
+  
+  .next-button {
+    right: 10px;
+  }
+
+  h1 {
+    text-align: center;
+    
+  }
+
+  .prev-button:hover, .next-button:hover {
+    color : rgb(206, 204, 204)
+  } 
+
+</style>
+</head>
+<body>
+  <main>
+    <div class="slider-container">
+        <h1>SLIDER LOGO JS</h1>
+        <div class="slider"></div>
+        <button class="prev-button" aria-label="See previous slide">&lt</button>
+        <button class="next-button" aria-label="See next slide">&gt</button>
+    </div>
+  </main>
+  <script src="index.js"></script> 
+</body>
+</html>
