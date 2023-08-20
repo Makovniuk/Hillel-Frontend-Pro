@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Work 49/ Fetching and Displaying Data from an API</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">   
+    <link href='style.css' rel='stylesheet'>
+<body>
+    <div class="d1">
+        <form>
+        <input type="text" id="search-input" placeholder="Search book globally or use filter..." required>
+        <button type="button" id="search">🔍</button>
+        <input type="radio"  name="type-search" value="+inauthor" >
+        <label for="author">Search by author</label>
+        <input type="radio"  name="type-search" value="+intitle" >
+        <label for="title">Search by title</label>
+        </form>
+      </div>
+      <h1>WELCOME TO WORLD OF BOOKS  </h1>
+    <div class="wrapper">
+        <div class="book-list" id="123"></div>
+    </div>
+    <div class="pagination"></div>
+   <script src="index2.js"></script> 
+</body>
+</html>
